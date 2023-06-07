@@ -3,7 +3,7 @@
         <div class="section-title text-center">
             <h2>Latest Products</h2>
             <p class="lead">
-                Collection of cutting-edge artwork from emerging artists.
+                Collection of various products.
             </p>
             <div class="line"></div>
         </div>

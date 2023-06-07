@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arthic</title>
+    <title>MayaStore</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
@@ -69,18 +69,6 @@
                                     <div class="d-flex flex-column">
                                         <div class="link">My Orders</div>
                                         <div class="link-desc">View & Manage Orders</div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="btnn" id="return">
-                                <a href="#" class="text-decoration-none d-flex align-items-start">
-                                    <div class="far fa-address-book pt-2 me-3"></div>
-                                    <div class="d-flex flex-column">
-                                        <div class="link">Artist registration</div>
-                                        <div class="link-desc">
-                                            View & Apply for artist
-                                        </div>
                                     </div>
                                 </a>
                             </li>

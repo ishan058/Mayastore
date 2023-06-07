@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\AdminList\AdminController;
 use App\Http\Controllers\Admin\ArtistList\ArtistController;
 use App\Http\Controllers\Admin\Order\OrderListController;
 use App\Http\Controllers\User\Order\UserOrderController;
-use App\Http\Controllers\Artistregister\ArtistregisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,8 +42,7 @@ use App\Http\Controllers\Artistregister\ArtistregisterController;
 Route::get('/', [HomeController::class, 'Index'])->name('home.index');
 Route::get('/user-profile/my-account', [HomeController::class, 'myAccount'])->name('account');
 Route::get('/user-profile/my-order', [HomeController::class, 'myOrder'])->name('order');
-Route::get('/user-profile/artist-register', [HomeController::class, 'artistRegister'])->name('artist-register');
-Route::get('/art', [HomeController::class, 'Art'])->name('home.art');
+Route::get('/art', [HomeController::class, 'Product'])->name('home.product');
 Route::POST('/cart', [HomeController::class, 'Cart'])->name('home.cart');
 Route::get('/cartIndex', [HomeController::class, 'CartIndex'])->name('home.cart.index');
 Route::get('/art/{id}', [HomeController::class, 'Parent'])->name('home.category');
@@ -68,10 +67,6 @@ Route::resource('/Customer/Order', AddToCartController::class);
 Route::delete('delete-from-cart', [AddToCartController::class, 'delete'])->name('cart.delete');
 Route::resource('/Admin/AdminList', AdminController::class);
 Route::resource('/Admin/UserList', UserListController::class);
-Route::get('artistList', [ArtistController::class,'index'])->name('artistList');
-Route::get('artistRequest', [ArtistController::class,'request'])->name('artistRequest');
-Route::get('/artistRegister/{id}', [ArtistController::class,'update'])->name('artistRegister');
-Route::get('/deleteRequest/{id}', [ArtistController::class,'delete'])->name('deleteRequest');
 
 // -------------------------------------
 
@@ -113,9 +108,4 @@ Route::get('/orders/approve/{orderCode}',[OrderListController::class,'ViewApprve
 Route::post('/orders/approve-details',[OrderListController::class,'ApproveOrderDetail'])->name('orders.approveDetail');
 Route::get('/orders/view/{orderCode}',[OrderListController::class,'ViewOrderDetail'])->name('orders.view');
 
-
-
-//Artist registration
-
-Route::post('login-artist', [ArtistregisterController::class,'artist'])->name('login-artist');
 

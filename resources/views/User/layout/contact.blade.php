@@ -13,7 +13,7 @@
                             <i class="fas fa-map-marker-alt fa-2x"></i>
                         </span>
                         <p class="text font-md fw-6">
-                            Chakrapath, Kathmandu, Nepal
+                            Lazimpat, Kathmandu, Nepal
                         </p>
                     </div>
                     <div class="contact-info-group">

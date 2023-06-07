@@ -7,7 +7,7 @@
     <!-- main content -->
     <main>
         <!-- category -->
-        @include('user.layout.art')
+        @include('user.layout.product')
         <!-- end of category -->
 
         <!-- Popular section -->

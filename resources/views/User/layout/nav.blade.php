@@ -17,7 +17,7 @@
                      <i class="fas fa-times"></i>
                  </button>
                  <li><a href="#home">home</a></li>
-                 <li><a href="#design">arts</a></li>
+                 <li><a href="#design">product</a></li>
                  <li><a href="#catalog">about</a></li>
                  <li><a href="#contact">contact</a></li>
              </ul>
@@ -44,8 +44,8 @@
                      </a>
                  </li>
                  <li class="nav-item">
-                     <a href="{{ route('home.art') }}" class="nav-link">
-                         <span class="nav-link-text">Arts</span>
+                     <a href="{{ route('home.product') }}" class="nav-link">
+                         <span class="nav-link-text">Products</span>
                          <span class="dropdown-icon">
                              <!-- <i class="fas fa-chevron-down"></i> -->
                          </span>

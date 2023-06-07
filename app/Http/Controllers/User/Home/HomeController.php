@@ -47,13 +47,13 @@ class HomeController extends Controller
         $OrderList = Order::with('products')->where('userId', Auth::id())
             ->get();
         $total = Order::where('userId', Auth::id())->get()->sum('price');
-        $art = DB::table('orders')
+        $product = DB::table('orders')
             ->join('users', 'orders.userId', '=', 'users.id')
             ->select('users.email', DB::raw('SUM(orders.price) as total'), 'users.contact', 'orders.OrderCode', 'users.name', 'orders.payment_status', 'orders.address', 'orders.OrderRemarks', 'orders.VerifiedRemarks', 'orders.ApproveRemarks', 'orders.RejectedRemarks')
             ->where('orders.userId', '=', Auth::id())
             ->groupBy('users.email', 'users.contact', 'orders.OrderCode', 'users.name', 'orders.payment_status', 'orders.address', 'orders.OrderRemarks', 'orders.VerifiedRemarks', 'orders.ApproveRemarks', 'orders.RejectedRemarks')
             ->get();
-        return view('user.profileDetail.user-profile', compact('orders', 'OrderList', 'total', 'art','userdetail'));
+        return view('user.profileDetail.user-profile', compact('orders', 'OrderList', 'total', 'product','userdetail'));
     }
     public function myAccount()
     {
@@ -66,13 +66,13 @@ class HomeController extends Controller
             ->get();
         $OrderList = Order::with('products')->get();
         $total = Order::where('userId', Auth::id())->get()->sum('OrderCode->price');
-        $art = DB::table('orders')
+        $product = DB::table('orders')
             ->join('users', 'orders.userId', '=', 'users.id')
             ->select('users.email', DB::raw('SUM(orders.price) as total'), 'users.contact', 'orders.OrderCode', 'users.name', 'orders.payment_status', 'orders.address', 'orders.OrderRemarks', 'orders.VerifiedRemarks', 'orders.ApproveRemarks', 'orders.RejectedRemarks')
             ->where('orders.userId', '=', Auth::id())
             ->groupBy('users.email', 'users.contact', 'orders.OrderCode', 'users.name', 'orders.payment_status', 'orders.address', 'orders.OrderRemarks', 'orders.VerifiedRemarks', 'orders.ApproveRemarks', 'orders.RejectedRemarks')
             ->get();
-        return view('user.profileDetail.user-profile', compact('OrderList', 'art', 'total', 'orders','userdetail'));
+        return view('user.profileDetail.user-profile', compact('OrderList', 'product', 'total', 'orders','userdetail'));
     }
     public function artistRegister()
     {
@@ -94,13 +94,13 @@ class HomeController extends Controller
         return view('user.profileDetail.user-profile', compact('OrderList', 'art', 'total', 'orders','userdetail'));
     }
 
-    public function Art()
+    public function Product()
     {
         $parent = Category::whereNull('parent_id')->get();
         $child = Category::whereNotNull('parent_id')->get();
         $products = Product::all();
         $count = AddToCart::where('userId', Auth::id())->get()->count();
-        return view('user.art.art', compact('products', 'child', 'parent', 'count'));
+        return view('user.product.product', compact('products', 'child', 'parent', 'count'));
     }
 
     public function Cart(Request $request)
@@ -169,7 +169,7 @@ class HomeController extends Controller
 
         $products = Product::whereIn('category_id', $childCategory->pluck('categoryId'))
             ->get();
-        return view('user.art.art_detail', compact('products', 'child', 'parent', 'count'));
+        return view('user.product.product_detail', compact('products', 'child', 'parent', 'count'));
     }
     public function Child($id)
     {
@@ -177,6 +177,6 @@ class HomeController extends Controller
         $child = Category::whereNotNull('parent_id')->get();
         $products = Product::where('category_id', $id)->get();
         $count = AddToCart::where('userId', Auth::id())->get()->count();
-        return view('user.art.art_detail', compact('products', 'parent', 'child', 'count'));
+        return view('user.product.product_detail', compact('products', 'parent', 'child', 'count'));
     }
 }

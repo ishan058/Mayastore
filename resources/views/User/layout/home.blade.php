@@ -8,7 +8,7 @@
                 <h1>everything that you want to buy are available</h1>
                 <br />
                 @if (Auth::user())
-                    <a href="{{ route('home.art') }}" class="btn-header text-white bg-brown">shop now</a>
+                    <a href="{{ route('home.product') }}" class="btn-header text-white bg-brown">shop now</a>
                 @else
                     <a href="{{ route('login') }}" class="btn-header text-white bg-brown">shop now</a>
                 @endif

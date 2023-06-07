@@ -2,7 +2,7 @@
 
 namespace App\Models\User\Order;
 
-use App\Models\login\User;
+use App\Models\User;
 use App\Models\Product\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

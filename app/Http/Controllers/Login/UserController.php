@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\login;
 
 use App\Http\Controllers\Controller;
-use App\Models\login\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

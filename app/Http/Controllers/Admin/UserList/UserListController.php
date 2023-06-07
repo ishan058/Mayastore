@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin\UserList;
 use App\Http\Controllers\Controller;
-use App\Models\login\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 

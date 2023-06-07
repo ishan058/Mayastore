@@ -19,10 +19,10 @@
                              <span style="color: white;">MayaStore</span>
                          </div>
                      </a>
-                     {{-- <div class="user_info">
+                     <div class="user_info">
 
-                {{-- <p><span class="online_animation"></span> Online</p> --}}
-                     {{-- </div>  --}}
+                <p><span class="online_animation"></span> Online</p>
+                    </div> 
                  </div>
              </div>
          </div>
@@ -59,7 +59,7 @@
                              {{-- <img class="img-responsive" src="adminpanel/images/logo/logo_icon.png" alt="#" /> --}}
                          </div>
                          <div class="logo">
-                             <span style="color: white;">Artihc</span>
+                             <span style="color: white;">MayaStore</span>
                          </div>
                      </a>
                      {{-- <div class="user_info">
@@ -96,10 +96,7 @@
                      <a href="{{ route('AdminList.index') }}"><i class="fa fa-user green_color"></i>
                          <span>Admin</span></a>
                  </li>
-                 {{-- artist --}}
-                 <li>
-                     <a href="{{ route('artistList') }}"><i class="fa fa-user red_color"></i> <span>Artist</span></a>
-                 </li>
+                
                  {{-- users --}}
                  <li>
                      <a href="{{ route('UserList.index') }}"><i
