@@ -4,7 +4,7 @@
         <link href="toastr.css" rel="stylesheet" />
         <div class="container">
             <div class="title">
-                <h1>Groscerrys</h1>
+                <h1>Grocessories</h1>
                 <div class="line"></div>
                 <!-- made change here  -->
                 <div class="toggler-and-category bg-brown text-white flex" style="margin-left: 40%; margin-top: 1%">
