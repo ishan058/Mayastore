@@ -204,10 +204,10 @@ transition: var(--transition); */
 }
 header {
   min-height: 100vh;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/artdashboard.jpg) top/cover no-repeat; */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/home.jpg) top/cover no-repeat; */
 
   background: linear-gradient(rgba(38, 38, 38, 0.6), rgba(50, 50, 50, 0.6)),
-    url(../images/artdashboard.jpg) center/cover no-repeat fixed;
+    url(../images/home.jpg) center/cover no-repeat fixed;
   display: flex;
   flex-direction: column;
   justify-content: stretch;

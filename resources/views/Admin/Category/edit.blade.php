@@ -14,9 +14,9 @@
                 <form action="{{ route('Category.update', [$category->categoryId]) }}" method="post">
                     @csrf
                     @method('PUT')
-                    {{-- <div>
+                    <div>
                 <input type="hidden" name="categoryId" value={{$category->categoryId}}>
-            </div> --}}
+            </div>
 
                     <div class="form-group  p-2">
                         <label for="exampleInputPassword1">Name</label>

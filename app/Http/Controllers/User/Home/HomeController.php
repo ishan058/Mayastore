@@ -4,7 +4,7 @@ namespace App\Http\Controllers\User\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category\Category;
-use App\Models\login\User;
+use App\Models\User;
 use App\Models\Order\OrderList;
 use App\Models\Product\Product;
 use App\Models\User\AddToCart\AddToCart;

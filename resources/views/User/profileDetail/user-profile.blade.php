@@ -21,7 +21,7 @@
 <body>
     <div class="mycontainer">
         <div class="logoimg">
-            <a href="{{ route('home.index') }}"><img src="{{ asset('userpanel/images/logo-white.png') }}" alt="img" style="height: 5rem; width: 9rem" /></a>
+            <a href="{{ route('home.index') }}"><img src="{{ asset('userpanel/images/logo.png') }}" alt="img" style="height: 5rem; width: 9rem" /></a>
 
         </div>
         <div class="myheader">
@@ -453,8 +453,8 @@
                         <div>Logged in as: {{ auth()->user()->email }}</div>
                         <hr />
 
-                        @if (count($art) > 0)
-                            @foreach ($art as $userDetail)
+                        @if (count($product) > 0)
+                            @foreach ($product as $userDetail)
                                 <div class="order-content-detail product-description">
                                     <div class="sn">
                                         {{ $userDetail->OrderCode }}
@@ -566,7 +566,7 @@
                                                         style="border: 2px solid #ccc; border-radius: 5px; padding: 20px; width: 400px; font-family: Arial, sans-serif; margin-left:30% ; margin-top:2rem; margin-bottom:1rem;">
                                                         <h1
                                                             style="font-size: 30px; margin: 0; padding-bottom: 10px; border-bottom: 2px solid #ccc;">
-                                                           Arthic </h1>
+                                                           MayaStore </h1>
                                                         <p style="font-size: 16px; margin: 0; padding-top: 20px;">
                                                             Billed
                                                             To: {{ $userDetail->name }}</p>
@@ -630,92 +630,6 @@
                 </div>
             </div>
             <!-- order section end -->
-
-            <!-- Artistregistration section -->
-            <div class="col-lg-9 my-lg-0 my-1 return-section-wrap" id="return-wrap">
-                <div id="main-content" class="bg-white border">
-                    @if (session('status'))
-                        <h6 class="alert alert-success">{{ session('status') }}</h6>
-                    @endif
-                    <div class="d-flex flex-column">
-                        <h2>Artist registration</h2>
-                        <div class="h5 mt-3">Hello {{ auth()->user()->name }},</div>
-                        <div>Logged in as: {{ auth()->user()->email }}</div>
-                        <hr />
-                        <form action="{{ route('login-artist') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-
-                            <div class="fw-normal text-muted mb-2">
-                                Already have an account ? <a href="{{ route('login1') }}"
-                                    class="text-primary fw-bold text-decoration-none">login here</a>
-                            </div>
-                            <div class="text-center text-muted text-uppercase mb-3">or</div>
-                            <div class="text-center text-bold text-uppercase mb-3">Apply for artist registration</div>
-
-                            @if (Session::has('error'))
-                                <p class="text-danger">{{ Session::get('error') }}</p>
-                            @endif
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                    id="floatingInput" name="name" value="{{$userdetail->name}}" placeholder="Full Name" readonly>
-                                <label for="floatingInput">Full Name</label>
-                                <span style="color :red;">
-                                    @error('name')
-                                        {{ $message }}
-                                    @enderror
-                                </span>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                    id="floatingInput" name="email" placeholder="name@example.com" value="{{$userdetail->email}}" readonly >
-                                <label for="floatingInput">Email address</label>
-                                <span style="color :red;">
-                                    @error('email')
-                                        {{ $message }}
-                                    @enderror
-                                </span>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control @error('contact') is-invalid @enderror"
-                                    id="floatingInput" name="contact" placeholder="Contact Number" value="{{$userdetail->contact}}" readonly >
-                                <label for="floatingInput">Contact Number</label>
-                                <span style="color :red;">
-                                    @error('contact')
-                                        {{ $message }}
-                                    @enderror
-                                </span>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control @error('address') is-invalid @enderror"
-                                    id="floatingInput" name="address" placeholder="Address" value="{{$userdetail->address}}" readonly >
-                                <label for="floatingInput">Address</label>
-                                <span style="color :red;">
-                                    @error('address')
-                                        {{ $message }}
-                                    @enderror
-                                </span>
-                            </div>
-
-                            {{-- <div class="form-check d-flex align-items-center">
-                                <input class="form-check-input check" type="checkbox" id="gridCheck">
-                                <label class="form-check-label ms-2" for="gridCheck">
-                                    I Agree <a href="#">Terms and conditions</a>.
-                                </label>
-                            </div> --}}
-                            <input type="hidden" value="{{ auth()->user()->id}}" name="id">
-                            <input type="hidden" value="{{auth()->user()->user_type}}" name="user_type">
-
-
-                            <button type="submit" class="btn btn-success submit_btn w-100 my-4">Apply</button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-            <!-- Artistregistration section end -->
             @endif
         </div>
     </div>
@@ -873,7 +787,7 @@
   const divToPrint = document.getElementById(divid);
 
   // Add some text to the div
-  const text = document.createTextNode("Arthic");
+  const text = document.createTextNode("MayaStore");
   divToPrint.appendChild(text);
 
   // Create a new window and write the contents of the div to it

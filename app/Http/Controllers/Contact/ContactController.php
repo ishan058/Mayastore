@@ -23,7 +23,7 @@ class ContactusController extends Controller
             'msg' => $request->msg
         ];
 
-        Mail::to('artihc82@gmail.com')->send(new ContactMail($details));
+        Mail::to('mayastore000@gmail.com')->send(new ContactMail($details));
         return back()->with('message_sent','Your message has been sent Successfully!');
     }
 }

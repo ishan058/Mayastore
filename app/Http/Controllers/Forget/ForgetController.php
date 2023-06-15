@@ -10,7 +10,7 @@ use App\Models\passwordreset\PasswordReset;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Carbon;
-use App\Models\login\User;
+use App\Models\User;
 
 
 class ForgetController extends Controller

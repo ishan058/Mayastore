@@ -23,7 +23,7 @@
                                 <th>Name</th>
                                 <th>Parent</th>
                                 <th>Parent Name</th>
-                                {{-- <th>Status</th> --}}
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

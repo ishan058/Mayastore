@@ -194,7 +194,7 @@
                     <h2>Your Cart is empty</h2>
                 </div>
                 <div class="order">
-                    <a href="{{ route('home.art') }}" class="btn order-btn back" type="submit">Back</a>
+                    <a href="{{ route('home.product') }}" class="btn order-btn back" type="submit">Back</a>
                 </div>
             @endif
             <div class="main-empty">
@@ -247,7 +247,7 @@
                     if (count - 1 == 0) {
                         $('.content').remove();
                         $('.main-empty').append(
-                            '<div class="empty"><h2>Your Cart is empty</h2></div><div class="order"><a href="{{ route('home.art') }}" class="btn order-btn" type="submit">Back</a></div>'
+                            '<div class="empty"><h2>Your Cart is empty</h2></div><div class="order"><a href="{{ route('home.product') }}" class="btn order-btn" type="submit">Back</a></div>'
                         );
                     }
                     $("#totalsum").text(totalsum - parseInt(price));
